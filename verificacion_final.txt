@@ -1,0 +1,71 @@
+============================================================
+VERIFICACIÓN FINAL - ENTREGABLE FINAL TBDI
+Alumno: Ruben Churqui Limachi
+Fecha: 28 de Septiembre de 2026
+============================================================
+
+=== 1. CONTEOS (MariaDB vs PostgreSQL) ===
+
+--- MariaDB ---
+tabla	filas
+departments	9
+dept_emp	331603
+dept_manager	24
+employees	300024
+salaries	2844047
+titles	443308
+
+--- PostgreSQL ---
+    tabla     |  filas  
+--------------+---------
+ departments  |       9
+ dept_emp     |  331603
+ dept_manager |      24
+ employees    |  300024
+ salaries     | 2844047
+ titles       |  443308
+(6 rows)
+
+
+=== 2. CHECKSUM MD5 (por fila) ===
+PostgreSQL: 300024 filas hasheadas
+MariaDB:    300024 filas hasheadas
+Diferencias: 0 líneas
+
+=== 3. HUÉRFANOS (integridad referencial) ===
+dept_emp.emp_no: 0
+dept_emp.dept_no: 0
+dept_manager.emp_no: 0
+dept_manager.dept_no: 0
+salaries.emp_no: 0
+titles.emp_no: 0
+
+=== 4. VISTAS MIGRADAS ===
+                List of views
+ Schema |         Name         | Type | Owner 
+--------+----------------------+------+-------
+ public | current_dept_emp     | view | ruben
+ public | dept_emp_latest_date | view | ruben
+(2 rows)
+
+ count  
+--------
+ 300024
+(1 row)
+
+ count  
+--------
+ 300024
+(1 row)
+
+
+=== 5. MUESTRA DE DATOS ===
+ emp_no | first_name | last_name | hire_date  
+--------+------------+-----------+------------
+  10001 | Georgi     | Facello   | 1986-06-26
+  10002 | Bezalel    | Simmel    | 1985-11-21
+  10003 | Parto      | Bamford   | 1986-08-28
+  10004 | Chirstian  | Koblick   | 1986-12-01
+  10005 | Kyoichi    | Maliniak  | 1989-09-12
+(5 rows)
+
