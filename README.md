@@ -590,7 +590,32 @@ El backup incluye las 6 tablas con sus datos y las 2 vistas migradas.
 | `md5_postgresql.txt` | 300,024 hashes MD5 calculados en PostgreSQL |
 | `verificacion_final.txt` | Verificación consolidada (conteos, MD5, huérfanos, vistas, muestra) |
 
-## IX. Referencias
+## IX. Ubicación de los archivos
+
+| Archivo | Formato | Tamaño | Ubicación |
+|---------|---------|--------|-----------|
+| `README.md` | Markdown | 20 KB | GitHub |
+| `README.pdf` | PDF | ~80 KB | Moodle |
+| `employees_backup.dump` | Custom (comprimido) | 35 MB | GitHub / Moodle |
+| `employees_backup.sql.zip` | SQL plano (comprimido) | 35 MB | GitHub / Moodle |
+| `employees_backup.sql` | SQL plano | 138 MB | Google Drive |
+| `employees_estructura_mariadb.sql` | SQL | 7 KB | GitHub |
+| `employees_estructura_postgresql.sql` | SQL | 4 KB | GitHub |
+| `md5_mariadb.txt` | Texto | 9.7 MB | GitHub |
+| `md5_postgresql.txt` | Texto | 9.7 MB | GitHub |
+| `verificacion_conteos_mariadb.txt` | Texto | < 1 KB | GitHub |
+| `verificacion_conteos_postgresql.txt` | Texto | < 1 KB | GitHub |
+| `verificacion_final.txt` | Texto | 2 KB | GitHub |
+| `vistas_mariadb.txt` | Texto | 2 KB | GitHub |
+| `vistas_postgresql.sql` | SQL | 1 KB | GitHub |
+
+**Nota:** El archivo `employees_backup.sql` (138 MB) excede el límite de GitHub (100 MB), por lo que está disponible en Google Drive:
+
+🔗 **[Descargar employees_backup.sql desde Google Drive](https://drive.google.com/file/d/1tOqD7UTNhZHRwclTvh2IDJNJ38eGpknF/view?usp=drive_link)**
+
+🔗 **Repositorio GitHub:** [https://github.com/Ruben9515/entregable-final-tbdi](https://github.com/Ruben9515/entregable-final-tbdi)
+
+## X. Referencias
 
 - PostgreSQL Documentation: [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html)
 - PostgreSQL Documentation: [pg_restore](https://www.postgresql.org/docs/current/app-pgrestore.html)
